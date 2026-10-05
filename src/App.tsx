@@ -197,7 +197,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-stone-900 dark:text-slate-100 flex flex-col font-sans antialiased transition-colors duration-200 pb-20 md:pb-8 select-none">
+    <div className="min-h-screen bg-[#faf9f5] dark:bg-[#0a0f0d] text-[#1a231f] dark:text-[#ebedea] flex flex-col font-sans antialiased transition-colors duration-200 pb-20 md:pb-8 select-none">
       
       {/* Top Bar Header */}
       <Header
@@ -209,7 +209,7 @@ export default function App() {
       />
 
       {/* Hero Banner with Egyptian Waqf Branding */}
-      <section className="bg-gradient-to-b from-emerald-950 via-emerald-900 to-teal-950 text-white py-8 md:py-12 px-4 md:px-8 border-b border-emerald-900/60 shadow-inner relative overflow-hidden">
+      <section className="bg-gradient-to-b from-[#0a231c] via-[#0f3c30] to-[#061c16] text-white py-10 md:py-16 px-4 md:px-8 border-b border-amber-600/30 shadow-inner relative overflow-hidden">
         
         {/* Decorative background grid pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
@@ -314,7 +314,7 @@ export default function App() {
       </section>
 
       {/* Search & Cascading Geographic Selectors Toolbar */}
-      <section className="bg-white dark:bg-slate-900 border-b border-stone-200 dark:border-slate-800 p-4 sticky top-[61px] z-30 shadow-sm transition-colors">
+      <section className="bg-white/95 dark:bg-[#111714]/95 backdrop-blur-md border-b border-[#e5e1d3] dark:border-[#1e2722] p-4 sticky top-[61px] z-30 shadow-sm transition-colors">
         <div className="max-w-7xl mx-auto space-y-3">
           
           {/* Top row: Search input & Governorate & City dropdowns */}
@@ -327,9 +327,9 @@ export default function App() {
                 placeholder="ابحث بالاسم، الأجهزة، السباكة، الدواء، أو رقم الهاتف..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-stone-50 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 rounded-2xl pr-10 pl-4 py-2.5 text-xs text-right focus:outline-none focus:border-emerald-600 dark:focus:border-emerald-500 dark:text-white"
+                className="w-full bg-[#f4f2e8] dark:bg-[#151f1b] border border-[#d5ceb6] dark:border-[#24332a] rounded-2xl pr-10 pl-4 py-2.5 text-xs text-right focus:outline-none focus:border-emerald-700 dark:focus:border-emerald-500 text-[#1a231f] dark:text-white transition-all shadow-inner"
               />
-              <Search className="w-4 h-4 text-stone-400 dark:text-slate-500 absolute right-3.5 top-3" />
+              <Search className="w-4 h-4 text-[#8a846f] dark:text-[#506056] absolute right-3.5 top-3" />
             </div>
 
             {/* Governorate Dropdown (Lg: col-3) */}
@@ -340,14 +340,14 @@ export default function App() {
                   setSelectedGovernorate(e.target.value);
                   setSelectedCity('all');
                 }}
-                className="w-full bg-stone-50 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 rounded-2xl pr-8 pl-3 py-2.5 text-xs text-right focus:outline-none focus:border-emerald-600 dark:focus:border-emerald-500 dark:text-white font-bold cursor-pointer"
+                className="w-full bg-[#f4f2e8] dark:bg-[#151f1b] border border-[#d5ceb6] dark:border-[#24332a] rounded-2xl pr-8 pl-3 py-2.5 text-xs text-right focus:outline-none focus:border-emerald-700 dark:focus:border-emerald-500 text-[#1a231f] dark:text-white font-bold cursor-pointer transition-all shadow-inner"
               >
                 <option value="all">📍 كل المحافظات المصرية</option>
                 {EGYPT_GOVERNORATES.map(gov => (
                   <option key={gov.id} value={gov.name}>محافظة {gov.name}</option>
                 ))}
               </select>
-              <MapPin className="w-4 h-4 text-emerald-700 dark:text-emerald-400 absolute right-2.5 top-3 pointer-events-none" />
+              <MapPin className="w-4 h-4 text-emerald-800 dark:text-emerald-400 absolute right-2.5 top-3 pointer-events-none" />
             </div>
 
             {/* City Cascading Dropdown (Lg: col-3) */}
@@ -356,14 +356,14 @@ export default function App() {
                 value={selectedCity}
                 disabled={selectedGovernorate === 'all'}
                 onChange={(e) => setSelectedCity(e.target.value)}
-                className="w-full bg-stone-50 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 rounded-2xl pr-8 pl-3 py-2.5 text-xs text-right focus:outline-none focus:border-emerald-600 dark:focus:border-emerald-500 dark:text-white font-bold cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[#f4f2e8] dark:bg-[#151f1b] border border-[#d5ceb6] dark:border-[#24332a] rounded-2xl pr-8 pl-3 py-2.5 text-xs text-right focus:outline-none focus:border-emerald-700 dark:focus:border-emerald-500 text-[#1a231f] dark:text-white font-bold cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-inner"
               >
                 <option value="all">🏙️ كل المراكز والأحياء</option>
                 {currentGovCities.map(city => (
                   <option key={city} value={city}>{city}</option>
                 ))}
               </select>
-              <Layers className="w-4 h-4 text-emerald-700 dark:text-emerald-400 absolute right-2.5 top-3 pointer-events-none" />
+              <Layers className="w-4 h-4 text-emerald-800 dark:text-emerald-400 absolute right-2.5 top-3 pointer-events-none" />
             </div>
 
           </div>

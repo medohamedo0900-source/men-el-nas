@@ -76,7 +76,7 @@ export const ListingCard: React.FC<ListingCardProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl border border-stone-200/80 dark:border-slate-800 p-5 shadow-sm hover:shadow-md hover:border-emerald-600/40 dark:hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-4 relative group">
+    <div className="bg-[#ffffff] dark:bg-[#111714] rounded-2xl border border-[#e4e0d2] dark:border-[#1f2823] p-5 shadow-sm hover:shadow-md hover:border-emerald-800/60 dark:hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-4 relative group">
       
       {/* Top Header Row */}
       <div className="space-y-2">
@@ -137,19 +137,19 @@ export const ListingCard: React.FC<ListingCardProps> = ({
       </div>
 
       {/* Description */}
-      <p className="text-xs text-stone-600 dark:text-slate-300 leading-relaxed font-sans bg-stone-50 dark:bg-slate-800/50 p-3 rounded-xl border border-stone-100 dark:border-slate-800/80">
+      <p className="text-xs text-[#2b352e] dark:text-[#d0d7d3] leading-relaxed font-sans bg-[#faf9f5] dark:bg-[#151d19]/60 p-3 rounded-xl border border-[#ece9dd] dark:border-[#212924]">
         {listing.description}
       </p>
 
       {/* Price / Terms Indicator */}
-      <div className="flex justify-between items-center border-t border-stone-100 dark:border-slate-800 pt-3 text-xs">
-        <span className="text-stone-400 dark:text-slate-500 font-semibold text-[11px]">مقابل الخدمة:</span>
+      <div className="flex justify-between items-center border-t border-[#ece9dd] dark:border-[#212924] pt-3 text-xs">
+        <span className="text-[#7c786a] dark:text-[#7f8f84] font-semibold text-[11px]">مقابل الخدمة:</span>
         <span className={`font-bold font-sans ${
           listing.scope === 'aid' 
-            ? 'text-emerald-700 dark:text-emerald-400 font-serif-islamic text-sm' 
+            ? 'text-emerald-800 dark:text-emerald-400 font-serif-islamic text-sm' 
             : listing.scope === 'urgent'
             ? 'text-rose-700 dark:text-rose-400'
-            : 'text-stone-900 dark:text-white font-mono'
+            : 'text-[#1a231f] dark:text-white font-mono'
         }`}>
           {listing.price}
         </span>
@@ -161,7 +161,7 @@ export const ListingCard: React.FC<ListingCardProps> = ({
         {/* Phone Call Button */}
         <a
           href={`tel:${listing.phone}`}
-          className="flex items-center justify-center gap-1 py-2 px-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer whitespace-nowrap"
+          className="flex items-center justify-center gap-1 py-2 px-2.5 bg-[#104f3f] hover:bg-[#0c3c30] text-white rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer whitespace-nowrap"
           title="اتصال هاتفي مباشر"
         >
           <Phone className="w-3.5 h-3.5" />
@@ -173,10 +173,10 @@ export const ListingCard: React.FC<ListingCardProps> = ({
           href={`https://wa.me/${listing.whatsapp}?text=${whatsappMessage}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-1 py-2 px-2.5 bg-emerald-950/10 dark:bg-emerald-950/40 border border-emerald-700/30 text-emerald-900 dark:text-emerald-300 hover:bg-emerald-900/20 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
+          className="flex items-center justify-center gap-1 py-2 px-2.5 bg-[#104f3f]/10 dark:bg-[#104f3f]/30 border border-[#104f3f]/30 text-[#104f3f] dark:text-[#a0e4d2] hover:bg-[#104f3f]/20 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
           title="مراسلة فورية عبر واتساب"
         >
-          <MessageCircle className="w-3.5 h-3.5 text-emerald-700 dark:text-emerald-400" />
+          <MessageCircle className="w-3.5 h-3.5 text-[#104f3f] dark:text-emerald-400" />
           <span>واتساب</span>
         </a>
 

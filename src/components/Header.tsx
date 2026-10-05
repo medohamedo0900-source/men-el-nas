@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   onToggleDarkMode,
 }) => {
   return (
-    <header className="sticky top-0 z-40 bg-emerald-950/95 dark:bg-slate-950/95 backdrop-blur border-b border-emerald-900/80 dark:border-slate-800 text-white px-4 md:px-8 py-3 transition-colors">
+    <header className="sticky top-0 z-40 bg-[#0a231c]/95 dark:bg-[#080d0b]/95 backdrop-blur border-b border-[#0d362a] dark:border-[#1c2721] text-white px-4 md:px-8 py-3 transition-colors">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
         
         {/* Zone 1: Brand Wordmark (Single element or clean lockup) */}
