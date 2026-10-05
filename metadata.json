@@ -1,0 +1,6 @@
+{
+  "name": "من الناس للناس: الوقف الرقمي الخيري",
+  "description": "منصة الوقف الرقمي الخيري والتضامن الأهلي التشاركي للمحافظات والمراكز المصرية - إعارة أجهزة طبية، حرفيين وأرزاق، وطلبات مواطنين عاجلة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
